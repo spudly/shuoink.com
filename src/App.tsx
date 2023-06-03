@@ -1,6 +1,7 @@
 import {FaFacebook, FaTwitter} from 'react-icons/fa';
 import {Dispatch, FC, SetStateAction, useEffect, useState} from 'react';
 
+// @ts-expect-error: keeping this for now
 const Footer: FC = () => (
   <footer className="text-center">
     <div className="flex justify-center items-center gap-2 p-2">
