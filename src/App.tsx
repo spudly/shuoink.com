@@ -10,7 +10,7 @@ const App: FC = () => (
     </header>
     <main className="flex-1 flex flex-col justify-center items-center">
       <img
-        src="/public/under construction.gif"
+        src="/under construction.gif"
         alt="under construction"
         className="w-[90%] max-h-full"
       />
