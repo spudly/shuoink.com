@@ -26,7 +26,7 @@ const Footer: FC = () => (
         <FaLinkedin className="text-2xl text-[#0077B5]" />
       </a>
       <a
-        href="https://github.com/spudlyo"
+        href="https://github.com/spudly"
         target="_blank"
         rel="noopener noreferrer"
       >
