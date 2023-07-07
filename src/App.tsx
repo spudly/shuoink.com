@@ -6,7 +6,7 @@ import ShuoinkLogo from './logos/ShuoinkLogo';
 const Tile: FC<{
   media: ReactElement;
   title: ReactNode;
-  subtitle: ReactNode;
+  subtitle?: ReactNode;
   href: string;
   description?: ReactNode;
 }> = ({media, title, subtitle, description, href}) => (
