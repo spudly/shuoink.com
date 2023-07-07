@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import type {FC} from 'react';
 
 const ShuoinkLogo: FC<JSX.IntrinsicElements['svg']> = props => (
@@ -6,7 +7,10 @@ const ShuoinkLogo: FC<JSX.IntrinsicElements['svg']> = props => (
     strokeWidth="1"
     strokeLinecap="square"
     {...props}
-    className="stroke-[#13065f] dark:stroke-[#7e8bce] fill-[#003675] dark:fill-[#c8ceea]"
+    className={clsx(
+      'stroke-[#13065f] dark:stroke-[#7e8bce] fill-[#003675] dark:fill-[#c8ceea]',
+      props.className
+    )}
   >
     <title>Shuoink</title>
     {/* big W */}

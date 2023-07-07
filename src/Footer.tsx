@@ -1,4 +1,10 @@
-import {FaFacebook, FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaStackOverflow,
+  FaTwitter,
+} from 'react-icons/fa';
 import {FC} from 'react';
 
 const Footer: FC = () => (
@@ -31,6 +37,13 @@ const Footer: FC = () => (
         rel="noopener noreferrer"
       >
         <FaGithub className="text-2xl text-[#000000]" />
+      </a>
+      <a
+        href="https://stackoverflow.com/users/163699/stephen-sorensen"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaStackOverflow className="text-2xl text-[#F48024]" />
       </a>
     </div>
     <p className="p-2">Copyright &copy; Stephen Sorensen</p>

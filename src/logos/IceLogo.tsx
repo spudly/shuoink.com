@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 
 const IceLogo: FC<JSX.IntrinsicElements['svg']> = props => (
-  <svg role="img" viewBox="0 0 79 80" height="50" {...props}>
+  <svg role="img" viewBox="0 0 79 80" {...props}>
     <title>ICE Logo</title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g transform="translate(-60.000000, -79.000000)">
