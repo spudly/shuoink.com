@@ -1,53 +1,28 @@
-import {
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaStackOverflow,
-  FaTwitter,
-} from 'react-icons/fa';
-import {FC} from 'react';
+import {FC, useState, useEffect} from 'react';
 
-const Footer: FC = () => (
-  <footer className="text-center">
-    <div className="flex justify-center items-center gap-2 p-2">
-      <a
-        href="https://www.facebook.com/stephenjohnsorensen/"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <FaFacebook className="text-2xl text-[#4267B2]" />
-      </a>
-      <a
-        href="https://twitter.com/shuoink"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <FaTwitter className="text-2xl text-[#1DA1F2]" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/stephensorensen/"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <FaLinkedin className="text-2xl text-[#0077B5]" />
-      </a>
-      <a
-        href="https://github.com/spudly"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaGithub className="text-2xl text-[#000000]" />
-      </a>
-      <a
-        href="https://stackoverflow.com/users/163699/stephen-sorensen"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaStackOverflow className="text-2xl text-[#F48024]" />
-      </a>
-    </div>
-    <p className="p-2">Copyright &copy; Stephen Sorensen</p>
-  </footer>
-);
+const START_YEAR = 2023;
+
+const Footer: FC = () => {
+  const [year, setYear] = useState(START_YEAR);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
+  return (
+    <footer className="h-screen w-full flex flex-col bg-white even:bg-gray-100 snap-start">
+      <div className="flex-1 flex flex-col justify-center">
+        <p className="text-6xl text-center">That's it. That's all there is.</p>
+        <p className="text-6xl text-center">¯\_(ツ)_/¯</p>
+      </div>
+
+      <p className="p-2 text-center">
+        Copyright &copy;{' '}
+        {year === START_YEAR ? year : `${START_YEAR} - ${year}`} Stephen
+        Sorensen
+      </p>
+    </footer>
+  );
+};
 
 export default Footer;

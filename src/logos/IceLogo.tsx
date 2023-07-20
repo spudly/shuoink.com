@@ -3,7 +3,7 @@ import type {FC} from 'react';
 const IceLogo: FC<JSX.IntrinsicElements['svg']> = props => (
   <svg role="img" viewBox="0 0 79 80" {...props}>
     <title>ICE Logo</title>
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-60.000000, -79.000000)">
         <g transform="translate(60.000000, 79.000000)">
           <polygon
