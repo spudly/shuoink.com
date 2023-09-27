@@ -2,20 +2,18 @@ import {FC} from 'react';
 import Footer from './Footer';
 import Section from './widgets/Section';
 import Hello from './pages/Hello';
-import Work from './pages/Work';
-import Projects from './pages/Projects';
 
 const App: FC = () => (
   <>
     <Section>
       <Hello />
     </Section>
-    <Section>
+    {/* <Section>
       <Work />
     </Section>
     <Section>
       <Projects />
-    </Section>
+    </Section> */}
     {/* <Section>
       <Interests />
     </Section>

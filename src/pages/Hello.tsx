@@ -5,8 +5,8 @@ import {
   FaGithub,
   FaLinkedin,
   FaStackOverflow,
-  FaTwitter,
 } from 'react-icons/fa';
+import {FaXTwitter} from 'react-icons/fa6';
 
 const Hello: FC = () => {
   return (
@@ -19,7 +19,7 @@ const Hello: FC = () => {
         />
         <SocialMediaIcon
           href="https://twitter.com/shuoink"
-          icon={<FaTwitter className="text-[#1DA1F2]" />}
+          icon={<FaXTwitter className="text-black" />}
         />
         <SocialMediaIcon
           href="https://www.linkedin.com/in/stephensorensen/"
