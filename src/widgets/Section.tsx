@@ -7,7 +7,7 @@ const Section: FC<JSX.IntrinsicElements['section']> = ({
 }) => (
   <section
     className={clsx(
-      'h-screen w-full flex flex-col bg-white even:bg-gray-100 snap-start',
+      'h-screen w-full flex flex-col bg-white even:bg-gray-100',
       className
     )}
   >

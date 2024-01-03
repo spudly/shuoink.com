@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 
-const Hello: FC = () => {
+const Home: FC = () => {
   return (
     <div className="flex-1 flex flex-col justify-center min-w-0">
       <h1 className="text-6xl text-center">👋 Hey, I'm Stephen!</h1>
@@ -38,4 +38,4 @@ const Hello: FC = () => {
   );
 };
 
-export default Hello;
+export default Home;
