@@ -1,6 +1,4 @@
-import Home from './pages/Home';
 import {Root} from './layouts/Root';
-import TipCalculator from './pages/calculators/Tip';
 
 export const routes = [
   {
@@ -9,11 +7,21 @@ export const routes = [
     children: [
       {
         index: true,
-        element: <Home />,
+        lazy: async () => ({
+          Component: (await import('./pages/Home')).default,
+        }),
       },
       {
         path: 'calculators/tip',
-        element: <TipCalculator />,
+        lazy: async () => ({
+          Component: (await import('./pages/calculators/Tip')).default,
+        }),
+      },
+      {
+        path: 'calculators/mortgage',
+        lazy: async () => ({
+          Component: (await import('./pages/calculators/Mortgage')).default,
+        }),
       },
     ],
   },

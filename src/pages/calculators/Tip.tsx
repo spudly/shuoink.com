@@ -1,6 +1,10 @@
 import {useState, FC} from 'react';
 import NumberField from '../../widgets/NumberField';
 import Head from '../../widgets/Head';
+import formatDollars from '../../utils/formatDollars';
+
+// TODO:
+// * Add "number of people" field and calculate tip per person
 
 const TipCalculator: FC = () => {
   const [billAmount, setBillAmount] = useState(0);
@@ -21,14 +25,30 @@ const TipCalculator: FC = () => {
         />
       </Head>
 
+      <div className="grid grid-cols-2 w-max">
+        <label htmlFor="billAmount">Bill Amount:</label>
+        <NumberField
+          id="billAmount"
+          value={billAmount}
+          onChange={e => setBillAmount(Number(e.target.value))}
+        />
+        <label htmlFor="tipPercentage">Tip Percentage:</label>
+        <NumberField
+          id="tipPercentage"
+          value={tipPercentage}
+          onChange={e => setTipPercentage(Number(e.target.value))}
+        />
+        <p>Tip: ${formatDollars(tip)}</p>
+        <p>Total: ${formatDollars(total)}</p>
+      </div>
       <h2>Tip Calculator - Calculate Tips and Total Bills Online</h2>
       <p>
         Welcome to our free online Tip Calculator, your go-to tool for quickly
-        and accurately calculating tips and total bills. Whether you're at a
-        restaurant, cafe, or ordering services, our easy-to-use calculator makes
-        it simple to determine the right tip amount and total cost. Say goodbye
-        to manual calculations and let our Tip Calculator handle the math for
-        you!
+        and accurately calculating tips and total bills. Whether you&apos;re at
+        a restaurant, cafe, or ordering services, our easy-to-use calculator
+        makes it simple to determine the right tip amount and total cost. Say
+        goodbye to manual calculations and let our Tip Calculator handle the
+        math for you!
       </p>
       <h3>Effortless Calculation:</h3>
       <p>
@@ -55,32 +75,16 @@ const TipCalculator: FC = () => {
       </p>
       <h3>No Downloads, No Sign-Ups:</h3>
       <p>
-        There's no need to download any apps or go through lengthy sign-up
+        There&apos;s no need to download any apps or go through lengthy sign-up
         processes. Our Tip Calculator is accessible online, anytime you need it.
       </p>
       <p>
         Ready to calculate tips and total bills with ease? Try our Tip
         Calculator now and simplify your payment experience!
       </p>
-      <div className="grid grid-cols-2 w-max">
-        <label htmlFor="billAmount">Bill Amount:</label>
-        <NumberField
-          id="billAmount"
-          value={billAmount}
-          onChange={e => setBillAmount(Number(e.target.value))}
-        />
-        <label htmlFor="tipPercentage">Tip Percentage:</label>
-        <NumberField
-          id="tipPercentage"
-          value={tipPercentage}
-          onChange={e => setTipPercentage(Number(e.target.value))}
-        />
-        <p>Tip: ${tip.toFixed(2)}</p>
-        <p>Total: ${total.toFixed(2)}</p>
-      </div>
       <p>
         Make tipping stress-free and accurate with our Tip Calculator. Whether
-        you're dining out, ordering in, or enjoying various services, our
+        you&apos;re dining out, ordering in, or enjoying various services, our
         calculator ensures you always leave the right tip. Bookmark this page
         for quick access whenever you need to calculate tips on the go!
       </p>
