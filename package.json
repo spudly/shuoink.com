@@ -13,16 +13,16 @@
     "@react-hookz/web": "^23.1.0",
     "chai": "^4.3.10",
     "clsx": "^2.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0-rc-9d4fba0788-20240530",
+    "react-dom": "^19.0.0-rc-9d4fba0788-20240530",
     "react-ga": "^3.3.1",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.21.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.6",
-    "@types/react": "^18.2.23",
-    "@types/react-dom": "^18.2.8",
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "@vitejs/plugin-react-swc": "^3.4.0",
@@ -35,5 +35,9 @@
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.9"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc"
   }
 }
