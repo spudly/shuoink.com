@@ -9,7 +9,7 @@ const Footer: FC = () => {
     <footer className="h-screen w-full flex flex-col bg-white even:bg-gray-100">
       <div className="flex-1 flex flex-col justify-center">
         <p className="text-6xl text-center">
-          That's it. That's all there is. There ain't no more.
+          That&rsquo;s it. That&rsquo;s all there is. There ain&rsquo;t no more.
         </p>
         <p className="text-6xl text-center">¯\_(ツ)_/¯</p>
       </div>

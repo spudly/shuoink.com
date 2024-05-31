@@ -12,7 +12,7 @@ import {FC} from 'react';
 const Home: FC = () => (
   <>
     <div className="flex-1 flex flex-col justify-center w-full h-screen">
-      <h1 className="text-6xl text-center">👋 Hey, I'm Stephen!</h1>
+      <h1 className="text-6xl text-center">👋 Hey, I&rsquo;m Stephen!</h1>
       <div className="flex justify-center items-center gap-8 p-8">
         <SocialMediaIcon
           href="https://www.facebook.com/stephenjohnsorensen/"
