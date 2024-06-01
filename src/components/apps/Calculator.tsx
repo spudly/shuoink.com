@@ -6,7 +6,6 @@ import clsx from 'clsx';
 
 const Calc: FC = () => {
   const [formula, setFormula] = useState<Array<string | number>>([]);
-  console.log(formula);
 
   const calculate = () => {
     const result = formula.reduce<number>((acc, curr, index) => {

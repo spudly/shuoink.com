@@ -3,10 +3,10 @@ import {
   PropsWithChildren,
   createContext,
   use,
-  useLayoutEffect,
   useRef,
   useState,
 } from 'react';
+import {useEffectOnce} from '../hooks/useEffectOnce';
 
 const ZContext = createContext<{z: number; inc: () => number}>({
   z: 0,
@@ -34,9 +34,9 @@ export const useZContext = () => {
   const {z: maxZ, inc} = context;
   const [z, setZ] = useState(() => maxZ + 1);
 
-  useLayoutEffect(() => {
-    setZ(inc());
-  }, [inc]);
+  useEffectOnce(() => {
+    setZ(inc()); // syncs z from context with the +1 in the initial state
+  });
 
   const moveToTop = () => {
     setZ(inc());
