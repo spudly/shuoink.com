@@ -30,7 +30,7 @@ const Welcome: FC = () => {
           <div className="flex-1 flex flex-col justify-center w-full h-screen gap-8">
             <h1 className="text-6xl text-center">👋 Hey, I&rsquo;m Stephen!</h1>
             <p className="text-center">
-              I made this. I think it's kinda cool. Have a look around.
+              I made this. I think it&rsaquo;s kinda cool. Have a look around.
             </p>
             <div className="flex justify-center items-center gap-8 p-8">
               <SocialMediaIcon

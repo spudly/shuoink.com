@@ -23,11 +23,7 @@ export const ZContextProvider: FC<PropsWithChildren> = ({children}) => {
     return zRef.current;
   };
 
-  return (
-    <ZContext.Provider value={{z: zRef.current, inc}}>
-      {children}
-    </ZContext.Provider>
-  );
+  return <ZContext.Provider value={{z, inc}}>{children}</ZContext.Provider>;
 };
 
 export const useZContext = () => {
@@ -40,7 +36,7 @@ export const useZContext = () => {
 
   useLayoutEffect(() => {
     setZ(inc());
-  }, []);
+  }, [inc]);
 
   const moveToTop = () => {
     setZ(inc());

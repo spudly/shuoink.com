@@ -24,12 +24,14 @@ export const useAppWindows = () => {
     setWindows(prev => prev.filter(window => window.id !== id));
   };
 
-  const prevWindows = usePrevious(windows);
+  const prevWindowsLength = usePrevious(windows)?.length;
+  const windowsLength = windows.length;
+  const {killApp} = shellContext;
   useEffect(() => {
-    if (prevWindows?.length && !windows.length) {
-      shellContext.killApp(appContext.instanceId);
+    if (prevWindowsLength && !windowsLength) {
+      killApp(appContext.instanceId);
     }
-  }, [prevWindows, windows, shellContext.killApp]);
+  }, [prevWindowsLength, windowsLength, killApp, appContext.instanceId]);
 
   return [windows, openWindow, closeWindow] as const;
 };

@@ -1,6 +1,5 @@
-import {FC, PropsWithChildren, useState} from 'react';
+import {FC, useState} from 'react';
 import {useEffectOnce} from '../../hooks/useEffectOnce';
-import {useAppContext} from '../../contexts/AppContext';
 import {useAppWindows} from '../../hooks/useAppWindows';
 import {Window} from '../Window';
 import clsx from 'clsx';
@@ -10,9 +9,7 @@ const Calc: FC = () => {
   console.log(formula);
 
   const calculate = () => {
-    let modifier = null;
     const result = formula.reduce<number>((acc, curr, index) => {
-      const prev = formula.at(index - 1);
       if (typeof curr === 'number') {
         const modifier = formula.at(index - 1);
         switch (modifier) {
@@ -28,7 +25,6 @@ const Calc: FC = () => {
             return curr;
         }
       }
-      modifier = curr;
       return acc;
     }, 0);
     setFormula([result]);

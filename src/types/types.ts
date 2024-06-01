@@ -25,4 +25,4 @@ export type Rect = {
   height: number;
 };
 
-export type AppContext = ApplicationInstance & {};
+export type AppContext = ApplicationInstance;

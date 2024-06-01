@@ -1,6 +1,5 @@
-import {FC, PropsWithChildren} from 'react';
+import {FC} from 'react';
 import {useEffectOnce} from '../../hooks/useEffectOnce';
-import {useAppContext} from '../../contexts/AppContext';
 import {useAppWindows} from '../../hooks/useAppWindows';
 import {Window} from '../Window';
 import {useShellContext} from '../../contexts/ShellContext';

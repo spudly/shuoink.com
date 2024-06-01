@@ -2,12 +2,10 @@ import {
   FcCalculator,
   FcDeleteDatabase,
   FcDocument,
-  FcGlobe,
   FcRightUp,
 } from 'react-icons/fc';
 import {Application} from '../../types/types';
 import {lazy} from 'react';
-import {browser} from 'process';
 
 export const APPS = {
   welcome: {

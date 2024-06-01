@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import {FC, cloneElement, useState} from 'react';
-import {FaCalculator} from 'react-icons/fa';
+import {FC, cloneElement} from 'react';
 import {IconGridIcon} from '../types/types';
 
 export const IconGrid: FC<{

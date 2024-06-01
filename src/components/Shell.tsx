@@ -47,11 +47,7 @@ export const Shell = () => {
       <TaskBar />
       <ZContextProvider>
         {runningApps.map(appInstance => (
-          <AppInstance
-            key={appInstance.instanceId}
-            appInstance={appInstance}
-            kill={() => killApp(appInstance.instanceId)}
-          />
+          <AppInstance key={appInstance.instanceId} appInstance={appInstance} />
         ))}
       </ZContextProvider>
     </ShellContext.Provider>

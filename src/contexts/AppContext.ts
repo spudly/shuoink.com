@@ -1,8 +1,5 @@
 import {createContext, use} from 'react';
-import {
-  AppContext as AppContextType,
-  ApplicationInstance,
-} from '../types/types';
+import {AppContext as AppContextType} from '../types/types';
 
 export const AppContext = createContext<AppContextType | null>(null);
 

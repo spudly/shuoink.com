@@ -9,5 +9,5 @@ export const useEffectOnce = (effect: VoidFunction) => {
     }
     effect();
     executedRef.current = true;
-  }, []);
+  }, [effect]);
 };

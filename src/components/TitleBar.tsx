@@ -1,15 +1,7 @@
-import {
-  FC,
-  MouseEventHandler,
-  ReactElement,
-  use,
-  useEffect,
-  useRef,
-} from 'react';
+import {FC, MouseEventHandler, useEffect, useRef} from 'react';
 import {MenuBar} from './MenuBar';
 import {useWindowContext} from '../contexts/WindowContext';
 import {useAppContext} from '../contexts/AppContext';
-import {FaMaximize, FaMinimize} from 'react-icons/fa6';
 import {
   FaWindowClose,
   FaWindowMaximize,
@@ -40,7 +32,7 @@ export const TitleBar: FC<{onDrag: (x: number, y: number) => void}> = ({
   };
 
   useEffect(() => {
-    const handleMouseUp = (e: MouseEvent) => {
+    const handleMouseUp = () => {
       startOffsetRef.current = null;
     };
 
@@ -57,7 +49,7 @@ export const TitleBar: FC<{onDrag: (x: number, y: number) => void}> = ({
       window.removeEventListener('mouseup', handleMouseUp);
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [onDrag]);
 
   return (
     <div
